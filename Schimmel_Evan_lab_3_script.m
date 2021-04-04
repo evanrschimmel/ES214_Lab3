@@ -2,16 +2,16 @@ clear all
 close all
 clc
 
-Loa=100;
+Loa=50;
 Link(1)=Loa;
-Lab=240;
+Lab=75;
 Link(2)=Lab;
-Lbd=165;
+Lbd=85;
 Link(3)=Lbd;
-Lod=190;
+Lod=115;
 Link(4)=Lod;
-Lac=140;
-phi=34;
+Lac=85;
+phi=30;
 
 if sum(Link) >= 2*(min(Link)+max(Link))
     fprintf('System is Grashof\n');
@@ -41,7 +41,7 @@ for angle=ThetaOAmin:1:ThetaOAmax
     Yc(i)=Loa*sind(angle)+Lac*sind(phi+ThetaAB);
 end
 
-plot(Xa,Ya,Xb,Yb,Xc,Yc,);
+plot(Xa,Ya,Xb,Yb,Xc,Yc);
 axis equal
 legend('Point A','Point B','Point C');
 xlabel('X Position [mm]');
