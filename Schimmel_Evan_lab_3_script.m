@@ -2,16 +2,16 @@ clear all
 close all
 clc
 
-Loa=50;
+Loa=0;
 Link(1)=Loa;
-Lab=75;
+Lab=0;
 Link(2)=Lab;
-Lbd=85;
+Lbd=0;
 Link(3)=Lbd;
-Lod=115;
+Lod=0;
 Link(4)=Lod;
-Lac=85;
-phi=30;
+Lac=0;
+phi=0;
 
 if sum(Link) >= 2*(min(Link)+max(Link))
     ThetaOAmax=360;
