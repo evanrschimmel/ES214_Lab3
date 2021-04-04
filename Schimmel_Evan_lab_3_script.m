@@ -14,12 +14,10 @@ Lac=85;
 phi=30;
 
 if sum(Link) >= 2*(min(Link)+max(Link))
-    fprintf('System is Grashof\n');
     ThetaOAmax=360;
     ThetaOAmin=0;
 elseif sum(Link) < 2*(min(Link)+max(Link))
-    fprintf('System is Non-Grashof\n');
-    ThetaOAmax=acosd(((Loa^2)+(Lod^2)-((Lab-Lbd)^2))/(2*Loa*Lod));
+    ThetaOAmax=acosd(((Loa^2)+(Lod^2)-((Lab+Lbd)^2))/(2*Loa*Lod));
     ThetaOAmin=-ThetaOAmax;
 end
 
